@@ -4,8 +4,7 @@
     <li>
       Title: <%= link.title %>
       URL: <%= link.url %>
-      Tag: <%= link.tags %>
+      Tag: <%= link.tags.first.name  unless link.tags.empty? %>
     </li>
-
   <% end %>
 </ul>

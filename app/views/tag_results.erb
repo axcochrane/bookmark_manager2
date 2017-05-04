@@ -1,18 +1,12 @@
 <h1> <%= "Articles tagged with #{@tag}" %> </h1>
 <ul id='tag-results'>
 
-
-<!--   <% results = @links.select do |link| %>
-    <% next if link.tags.empty? %>
-    <% link.tags.map(&:name).include?(@tag) %>
-  <% end %>
- -->
-
-  <% results.each do |link| %>
+  <% @results = @tags.find{ |x| x.name == @tag } %>
+  <% @results.nil? ? @results = [] : @results = @results.links %>
+  <% @results.each do |link| %>
     <li>
       Title: <%= link.title %>
       URL: <%= link.url %>
     </li>
   <% end %>
 </ul>
-

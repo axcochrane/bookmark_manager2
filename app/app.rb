@@ -23,7 +23,7 @@ require_relative "data_mapper_setup"
     end
 
     get '/tags/:name' do
-      p @links
+      p @links.first.tags
       @tag = params[:name]
       erb :tag_results
     end
