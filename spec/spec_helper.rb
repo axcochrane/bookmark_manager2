@@ -26,16 +26,16 @@ Capybara.app = BookmarkManager
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.before(:suite) do
-  DatabaseCleaner.strategy = :transaction
-  DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
   end
 
   config.before(:each) do
-  DatabaseCleaner.start 
+    DatabaseCleaner.start 
   end
 
   config.after(:each) do
-  DatabaseCleaner.clean
+    DatabaseCleaner.clean
   end
 
 
