@@ -1,9 +1,13 @@
 <h1> <%= "Articles tagged with #{@tag}" %> </h1>
 <ul id='tag-results'>
-  <% results = @links.select do |link| %>
+
+
+<!--   <% results = @links.select do |link| %>
     <% next if link.tags.empty? %>
-    <% link.tags.first.name == @tag  %>
+    <% link.tags.map(&:name).include?(@tag) %>
   <% end %>
+ -->
+
   <% results.each do |link| %>
     <li>
       Title: <%= link.title %>
@@ -11,3 +15,4 @@
     </li>
   <% end %>
 </ul>
+
