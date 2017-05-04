@@ -12,9 +12,9 @@ As a User
 So that I can see categorise my bookmarks
 I want to add tags to my bookmarks
 
-As a User
-So that I can see easily view my bookmarks
-I want to be able to filter my bookmarks by their tags
+As a time-pressed user
+So that I can quickly find links on a particular topic
+I would like to filter links by tag
 
 As a time-pressed user
 So that I can organise my many links into different categories for ease of search
