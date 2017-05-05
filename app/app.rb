@@ -7,6 +7,10 @@ require_relative "data_mapper_setup"
 
     before { @links = Link.all } 
 
+    get '/' do
+      redirect '/links'
+    end
+
     get '/links' do
       @link = Link.all
       erb :links
