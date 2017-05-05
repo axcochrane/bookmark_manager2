@@ -1,5 +1,3 @@
-require './app/models/link'
-
 feature 'Viewing Links' do
 
   scenario 'I can see existing links on the links page' do

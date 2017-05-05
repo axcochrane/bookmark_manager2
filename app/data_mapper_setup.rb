@@ -1,8 +1,8 @@
 require 'data_mapper'
 require 'dm-postgres-adapter'
 
-require_relative 'models/tag'
-require_relative 'models/link'
+require File.join(File.dirname(__FILE__), '..', 'models', 'link.rb')
+require File.join(File.dirname(__FILE__), '..', 'models', 'tag.rb')
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
 DataMapper.finalize
